@@ -247,6 +247,13 @@ do
   })
 end
 
+options = {
+  opt = {
+    shiftwidth = 4,
+    tabstop = 4,
+  },
+}
+
 -- ============================================================
 -- SECTION 2: PLUGIN MANAGER INTRO
 -- vim.pack intro, build hooks
@@ -778,7 +785,7 @@ do
       local enabled_filetypes = {
         lua = true,
         python = true,
-        c = true,
+        c = false,
       }
       if enabled_filetypes[vim.bo[bufnr].filetype] then
         return { timeout_ms = 500 }
@@ -976,3 +983,4 @@ end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+--
