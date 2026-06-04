@@ -108,6 +108,9 @@ do
   -- NOTE: You can change these options as you wish!
   --  For more options, you can see `:help option-list`
 
+  vim.o.shiftwidth = 4
+
+  vim.o.tabstop = 4
   -- Make line numbers default
   vim.o.number = true
   -- You can also add relative line numbers, to help with jumping.
@@ -248,13 +251,6 @@ do
     callback = function() vim.hl.on_yank() end,
   })
 end
-
-options = {
-  opt = {
-    shiftwidth = 4,
-    tabstop = 4,
-  },
-}
 
 -- ============================================================
 -- SECTION 2: PLUGIN MANAGER INTRO
